@@ -38,5 +38,7 @@ ZIPを解凍し、clipbdsv.exe をそのまま実行できます。どこかのフォルダーに保存してタ
 ## Author
 
 SPUMONI.ORG
+
 twitter: @Spumo
+
 Github: https://github.com/fukuyori/clipbdsv
