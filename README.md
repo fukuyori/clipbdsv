@@ -29,6 +29,8 @@ clipbdsv -d C:\temp -f clipimg -t img
 
 clipbdsv -t txt -e Shift_JIS
 
+clipbdsv --help
+
 ## Requirement
 
 .Net Framework 4.7.2 Ç≈ìÆçÏÇµÇ‹Ç∑ÅB
@@ -56,3 +58,5 @@ SPUMONI.ORG
 twitter: @Spumo
 
 Github: https://github.com/fukuyori/clipbdsv
+
+Qiita: https://qiita.com/spumoni/items/cce3c3c5e24751b283bf

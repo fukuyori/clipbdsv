@@ -25,6 +25,9 @@ namespace clipbdsv {
         [STAThread]
         static void Main(string[] args) {
 
+            Array.Resize(ref args, args.Length + 1);
+            args[args.Length - 1] = "-";
+
             var result = Parser.Parse<Options>(args);
 
             // フォルダー
