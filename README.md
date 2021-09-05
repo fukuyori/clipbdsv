@@ -5,13 +5,13 @@ Overview
 
 ## Description
 
-　クリップボードに入れたデータをファイルに保存するコマンドライン・プログラムです。
+クリップボードに入れたデータをファイルに保存するコマンドライン・プログラムです。
 
-　プログラムを実行すると、標準でデスクトップの ClipbdSv フォルダに保存します。
+プログラムを実行すると、標準でデスクトップの ClipbdSv フォルダに保存します。
 ファイル作成時の日時がファイル名になり、ＣＳＶファイル、リッチテキスト・ファイル、テキストファイル、画像ファイル（JPEG）として保存されます。
 画像ファイルは、ＱＲコードが含まれている場合、ＱＲコードの内容がテキストファイルに保存されます。
 
-　以下のコマンドライン・オプションがあります。
+以下のコマンドライン・オプションがあります。
 
 -f 出力ファイル名を指定（拡張子なし）
 
@@ -24,16 +24,24 @@ Overview
 ## Usage
 
 clipbdsv
+
 clipbdsv -d C:\temp -f clipimg -t img
+
 clipbdsv -t txt -e Shift_JIS
+
+## Requirement
+
+.Net Framework 4.7.2 で動作します。
 
 ## Install
 
-ZIPを解凍し、clipbdsv.exe をそのまま実行できます。どこかのフォルダーに保存してタスクバーにピン止めしておくと便利です。
+Windows10上で、実行ファイル1つで動作するコマンドライン・プログラムです。
+ZIPを解凍し、clipbdsv.exe をそのまま実行できます。
+どこかのフォルダーに保存してタスクバーにピン止めしておくと便利です。
 
 ## Licence
 
-[MIT]
+[MIT](https://github.com/fukuyori/clipbdsv/blob/master/LICENSE.txt)
 
 [GitHub nashby/BitmapFromBitmapSource.cs](https://gist.github.com/nashby/916300)
 

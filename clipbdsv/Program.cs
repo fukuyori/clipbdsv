@@ -31,13 +31,24 @@ namespace clipbdsv {
             string folder;
             if (result.Value._folder == null) {
                 folder = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory), "ClipbdSv");
-                if (!Directory.Exists(folder)) {
-                    Directory.CreateDirectory(folder);
+                try {
+                    if (!Directory.Exists(folder)) {
+                        Directory.CreateDirectory(folder);
+                    }
+                } catch {
+                    Console.WriteLine("フォルダーが作成できませんでした");
+                    Environment.Exit(1);
                 }
             } else {
                 folder = result.Value._folder;
+                DirectoryInfo hoge;
                 if (!Directory.Exists(folder)) {
-                    Directory.CreateDirectory(folder);
+                    try {
+                        Directory.CreateDirectory(folder);
+                    } catch {
+                        Console.WriteLine("フォルダーが作成できませんでした");
+                        Environment.Exit(1);
+                    }
                 }
             }
 
@@ -52,7 +63,12 @@ namespace clipbdsv {
             // エンコード
             Encoding enc = Encoding.GetEncoding("utf-8");
             if (result.Value._encode != null) {
-                enc = Encoding.GetEncoding(result.Value._encode);
+                try {
+                    enc = Encoding.GetEncoding(result.Value._encode);
+                } catch {
+                    Console.WriteLine($"{result.Value._encode}　は、正しいエンコード名ではありません");
+                    Environment.Exit(1);
+                }
             }
 
             // 出力形式の選択
